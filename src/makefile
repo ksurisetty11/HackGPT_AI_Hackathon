@@ -13,7 +13,7 @@ all: install run
 # Dependencies
 .PHONY: install
 install:
-	$(PIP) install --user flask openai requests
+    $(PIP) install flask openai requests
 
 .PHONY: run
 run:
