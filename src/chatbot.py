@@ -5,9 +5,9 @@ import config
 openai.api_key = config.OPENAI_API_KEY
 
 def get_chat_response(user_input):
-    
-  # Sends user input to the GPT-3 model and returns the response.
-
+    """
+    Sends user input to the GPT-3 model and returns the response.
+    """
     # Prepare the prompt for GPT-3
     prompt = format_prompt(user_input)
     
@@ -17,12 +17,11 @@ def get_chat_response(user_input):
         messages=[{"role": "user", "content": prompt}]
     )
     
-    # Extract the response and push 
-    return response.choices[0].message["content"].strip()
+    # Extract the response and return it
+    return response.choices[0].message['content'].strip()
 
 def format_prompt(user_input):
-    
-  ## User prompt 
-
+    """
+    Format the prompt for GPT-3.
+    """
     return f"User: {user_input}\nChatbot:"
-

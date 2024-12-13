@@ -1,6 +1,6 @@
 # Variables
 PYTHON=python3
-PIP=pip3
+#PIP=pip3
 FLASK_APP=app.py
 FLASK_ENV=development
 HTML_DIR=templates
@@ -13,7 +13,7 @@ all: install run
 # Dependencies
 .PHONY: install
 install:
-	$(PIP) install --user flask openai requests
+	$(PIP) install flask openai requests
 
 .PHONY: run
 run:
