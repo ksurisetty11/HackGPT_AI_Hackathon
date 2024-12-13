@@ -1,6 +1,6 @@
 import openai
 
-open.api_key = 
+openai.api_key = 
 
 def chat_with_gpt(prompt):
     response = openai.ChatCompletion.create(
@@ -8,7 +8,7 @@ def chat_with_gpt(prompt):
         messages=[{"role": "user", "content": prompt}]
     )
 
-    return response.choices[0].message.content.strip()
+    return response.choices[0].message["content"].strip()
 
 if __name__ == "__main__":
     while True: 
