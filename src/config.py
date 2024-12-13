@@ -1,0 +1,6 @@
+#LinkedIn API
+
+#OpenAI API
+OPENAI_API_KEY = "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"
+
+#Other configs??
