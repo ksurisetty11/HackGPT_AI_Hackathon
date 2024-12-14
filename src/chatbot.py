@@ -13,7 +13,7 @@ def get_chat_response(user_input):
     
     # Call OpenAI's API with the formatted prompt
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",  # Or use gpt-4 if available
+        model="gpt-3.5-turbo", 
         messages=[{"role": "user", "content": prompt}]
     )
     

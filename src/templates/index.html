@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn AI Course Recommendation Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn AI Course Recommendation Bot</h1>
+
+        <div id="chat-container">
+            <textarea id="user-input" placeholder="Ask a question or type something..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+            <div id="chat-output"></div>
+        </div>
+
+        <div id="courses-container">
+            <h2>Recommended Courses</h2>
+            <div id="courses-output"></div>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
