@@ -38,6 +38,7 @@ body {
     background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
     max-height: 500px;
+    scroll-behavior: smooth;
 }
 
 /* User message */
@@ -90,4 +91,32 @@ body {
 
 .input-container button:hover {
     background-color: #45a049;
+}
+
+.input-typing-indicator {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-style: italic;
+    color: #888;
+    margin: 5px 0;
+    align-self: flex-start;
+}
+
+.input-typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
 }
